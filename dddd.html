@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mul</title>
+</head>
+<body>
+<input type="text" id="firstnum" />
+
+<ul id="multable"></ul>
+<button onclick="display()">TABLE</button>
+<script>
+
+function display() {
+  var fnum = parseInt(document.getElementById("firstnum").value);
+
+const tableList = document.getElementById('multable');
+    
+    var table = '';
+
+    for (var i = 1; i <= 10; i++) {
+      const number = i;
+      const result = number * fnum;
+      const row = '<li>' + number + '*' + fnum + '=' + result + '</li>';
+
+      table += row;
+    }
+
+    tableList.innerHTML = table;
+}
+
+</script>
+</body>
+</html>
